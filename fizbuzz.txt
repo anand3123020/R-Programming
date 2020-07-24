@@ -1,0 +1,40 @@
+# Complete the 'fizzBuzz' function below.
+#
+# Complete the 'fizzBuzz' function below.
+#
+#
+# Complete the 'fizzBuzz' function below.
+#Taking the input from user
+#n <- readline(prompt="Enter a number: ")
+n <- 15
+#The function accepts INTEGER n as parameter.
+#print(paste("Hi,", n, "is the number given by user"))
+
+
+fizzBuzz <- function(n) {
+    # Write your code here
+i <- 1
+#print(paste(i))
+while (i <= n) {
+if (i %% 3 == 0 & i %% 5 != 0) {
+    print(paste("Fizz"))
+} else if (i %% 3 != 0 & i %% 5 == 0) {
+    print(paste("Buzz"))
+} else if (i %% 3 == 0 & i %% 5 == 0) {
+    print(paste("FizzBuzz"))
+}else {
+    print(i)
+}
+i = i + 1
+
+}
+}
+
+stdin <- file('stdin')
+open(stdin)
+
+n <- as.integer(trimws(readLines(stdin, n = 1, warn = FALSE), which = "both"))
+
+fizzBuzz(n)
+
+close(stdin)
